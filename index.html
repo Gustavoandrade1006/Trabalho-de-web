@@ -9,18 +9,55 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+
 <body>
     <!-- Links para ajudar na importação dos arquivos
         https://pt.stackoverflow.com/questions/12722/incluir-outro-arquivo-html-em-um-arquivo-html
         https://web.dev/articles/imports?hl=pt-br
     -->
-
-    <iframe src="pages/header.html" frameborder="0"></iframe>
-
-    <iframe src="pages/sidebar.html" frameborder="0"></iframe>
-
-    <iframe src="pages/footer.html" frameborder="0"></iframe>
+    <input type="checkbox" id="lua" hidden>
+    <label for="lua" class="dark-mode-btn">🌙</label>
+    <div class="d-grid min-vh-100">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center">
+                <header class="header">
+                    <h2>Coblog</h2>
+                    <nav class="links">
+                        <a href="#">Copa 2026 ⚽</a>
+                        <a href="#">Campeões 🏆</a>
+                        <a href="#">Fale conosco ☎️</a>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    
+        <sidebar id="sidebar">
+            <input type="checkbox" id="menu-toggle" hidden>
+            <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
+        
+            <nav class="menu" style="color: white">
+                <h5 class="text-white mb-4">Menu</h5>
+                <a href="#" class="nav-link text-white">🌍 Informações</a>
+                <a href="#" class="nav-link text-white">📊 Partidas</a>
+                <a href="#" class="nav-link text-white">👤 Perfil</a>
+                <a href="#" class="nav-link text-white">⚙️ Configurações</a>
+                <a href="#" class="nav-link text-white">🚪 Sair</a>
+            </nav>
+        </sidebar>
+        
+        
+        <main>
+        </main>
+        
+        
+        <div class="container-fluid bg-secondary" style="position: fixed; bottom: 0; left: 0; width: 100%;">
+            <footer>
+                <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">&copy; Copyright.</p>
+            </footer>
+        </div>
+        
+    </div>
+    <script src="scripts/script.js"></script>
 
 </body>
-
 </html>
