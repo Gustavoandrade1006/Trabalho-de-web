@@ -94,7 +94,6 @@ a{
 
 
 .dark-mode-btn {
-  position: fixed;
   bottom: 100px;      
   right: 50px;       
   font-size: 1.4rem;
@@ -123,6 +122,11 @@ a{
 
 #lua:checked ~ .d-grid .menu {
   background: #283845;
+}
+
+#lua:checked ~ .d-grid .card {
+    background-color: #16213e;
+    color: #e0e0e0;
 }
 
 
