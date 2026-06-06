@@ -13,7 +13,7 @@
 
     <input type="checkbox" id="lua" hidden>
     
-    <div class="d-grid min-vh-100">
+    <div class="d min-vh-100" style="position: relative;">
         <div class="container-fluid">
             <div class="row">
                 <header class="header">
@@ -28,21 +28,25 @@
                 </header>
             </div>
         </div>
-    
-        <sidebar id="sidebar">
-            <input type="checkbox" id="menu-toggle" hidden>
-            <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
-        
-            <nav class="menu" style="color: white">
-                <h5 class="text-white mb-4">Menu</h5>
-                <a href="#" class="nav-link text-white">🌍 Informações</a>
-                <a href="#" class="nav-link text-white">📊 Partidas</a>
-                <a href="#" class="nav-link text-white">👤 Perfil</a>
-                <a href="#" class="nav-link text-white">⚙️ Configurações</a>
-                <a href="#" class="nav-link text-white">🚪 Sair</a>
-                <label for="lua" class="dark-mode-btn">🌙</label>
-            </nav>
-        </sidebar>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <sidebar id="sidebar">
+                        <input type="checkbox" id="menu-toggle" hidden>
+                        <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
+                        <nav class="menu" style="color: white">
+                            <h5 class="text-white mb-4">Menu</h5>
+                            <a href="#" class="nav-link text-white">🌍 Informações</a>
+                            <a href="#" class="nav-link text-white">📊 Partidas</a>
+                            <a href="#" class="nav-link text-white">👤 Perfil</a>
+                            <a href="#" class="nav-link text-white">⚙️ Configurações</a>
+                            <a href="#" class="nav-link text-white">🚪 Sair</a>
+                            <label for="lua" class="dark-mode-btn">🌙</label>
+                        </nav>
+                    </sidebar>
+                </div>
+            </div>
+        </div>
 
 
         <main>
