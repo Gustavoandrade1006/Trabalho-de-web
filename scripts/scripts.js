@@ -46,7 +46,7 @@ const copas = [
     { ano: 2010, campeao: "Espanha", imagem: "../imagens/copa 2010.jpg", descricao: "Copa do Mundo na África do Sul, com vitória da Espanha." },
     { ano: 2014, campeao: "Alemanha", imagem: "../imagens/copa 2014.jpg", descricao: "Copa do Mundo no Brasil, com vitória da Alemanha." },
     { ano: 2018, campeao: "França", imagem: "../imagens/copa 2018.jpg", descricao: "Copa do Mundo na Rússia, com vitória da França." },
-    { ano: 2022, campeao: "Argentina", imagem: "../imagens/copa 2022.jpg", descricao: "Copa do Mundo na Catar, com vitória da Argentina." },
+    { ano: 2022, campeao: "Argentina", imagem: "../imagens/copa 2022.jpg", descricao: "Copa do Mundo no Catar, com vitória da Argentina." },
     { ano: 2026, campeao: "???", imagem: "../imagens/copa 2026.jpg", descricao: "Copa do Mundo nos Estados Unidos, México e Canadá, em busca pelo hexa." }
 
 
