@@ -82,11 +82,9 @@ main {
   z-index: 1000;
 }
 
-
 sidebar {
   overflow: visible;
 }
-
 
 #menu-toggle:checked~.menu {
   left: 0;
@@ -95,8 +93,6 @@ sidebar {
 a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-
-
 }
 
 .dark-mode-btn {
@@ -137,8 +133,6 @@ a {
 .overlay.ativo {
   display: block;
 }
-
-
 
 .carousel {
   width: 100%;
