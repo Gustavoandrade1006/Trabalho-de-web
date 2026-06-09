@@ -60,7 +60,7 @@ footer {
   justify-content: center;
   width: 100%;
   padding: 10px 0;
-  background-color: var(--bg-header);
+  background-color: var(--bg-header) !important;
 }
 
 main {
