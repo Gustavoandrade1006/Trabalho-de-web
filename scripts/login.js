@@ -12,4 +12,3 @@ function login() {
         localStorage.setItem("senha-usuario", senha);
     }
 }
-

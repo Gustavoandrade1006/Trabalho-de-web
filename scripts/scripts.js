@@ -99,6 +99,11 @@ function carregarCards() {
 }
 carregarCards()
 
+function logout() {
+    localStorage.clear()
+    location.reload();
+}
+
 let lua = document.querySelector("#lua");
 const modoEscuro = localStorage.getItem("modo-escuro") == "true";
 
@@ -111,3 +116,28 @@ if (lua) {
         localStorage.setItem("modo-escuro", lua.checked)
     });
 }
+
+const nomeUsuario = localStorage.getItem("nome-usuario");
+let nav = document.getElementById("nav");
+let botao = document.createElement("a");
+let comeco = "";
+if (!window.location.pathname.includes("pages")) {
+    comeco = "pages/";
+}
+if (nomeUsuario) {
+    botao.innerText = "Perfil";
+    botao.href = `${comeco}perfil.html`;
+    
+    let menu = document.getElementById("menu-lateral")
+    sair = document.createElement("button");
+    sair.innerText = "🚪 Sair";
+    sair.classList.add("btn", "btn-link", "text-white", "text-start", "text-decoration-none", "px-0");
+    sair.onclick = logout;
+    menu.appendChild(sair);
+} else {
+    botao.innerText = "Login";
+    botao.href = `${comeco}login.html`;
+    botao.target = "_parent"
+}
+
+nav.prepend(botao);
