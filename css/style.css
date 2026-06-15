@@ -27,12 +27,12 @@ body {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   color: white;
   background-color: var(--bg-header);
   height: 100px;
-  padding-left: 20px;
+  padding: 20px;
   z-index: 999;
 }
 
