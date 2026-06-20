@@ -146,7 +146,7 @@ if (nomeUsuario) {
 
 nav.prepend(botao);
 
-// Função que redireciona o usuário para a página se está logado ou não
+// Função que redireciona o usuário para a página se está logado ou não / Implementar modal para quando o usuário for redirecionado para o Login
 function direcionarPerfil() {
     const nomeUsuario = localStorage.getItem("nome-usuario");
     let comeco = "";
@@ -165,3 +165,4 @@ function direcionarPerfil() {
             .setAttribute("href", `${comeco}login.html`);
     }
 }
+// Função para mostrar os dados antigos armazenados no LocalStorage para editar
