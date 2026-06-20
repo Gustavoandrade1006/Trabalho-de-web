@@ -25,10 +25,7 @@
             <div class="row">
                 <header class="header col-12">
                     <h2>Coblog</h2>
-                    <nav id="nav" style="gap: 15px" class="d-flex justify-content-between">
-                        <a href="index.html" target="_parent">Página Inicial 🏠</a>
-                        <a href="pages/edicoesAnteriores.html" target="_parent">Edições Anteriores 🏆</a>
-                        <a href="pages/comunidade.html" target="_parent">Comunidade 👥</a>
+                    <nav id="nav" style="gap: 15px; padding-right: 10px;" class="d-flex justify-content-between">
                     </nav>
                 </header>
             </div>
@@ -42,11 +39,10 @@
                         <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
 
                         <nav class="menu" style="color: white" ; id="menu-lateral">
-                            <h5 class="text-white mb-4 menu-texto">Menu</h5>
-                            <a href="#" class="nav-link text-white"><span class="menu-texto">🌍 Informações</span></a>
-                            <a href="#" class="nav-link text-white"><span class="menu-texto">📊 Partidas</span></a>
-                            <a href="#" class="nav-link text-white"><span class="menu-texto">👤 Perfil</span></a>
-                            <a href="#" class="nav-link text-white"><span class="menu-texto">⚙️ Configurações</span></a>
+                            <h4 style = "padding-top: 5px;" class="text-white menu-texto">Menu</h4>
+                            <a href="pages/edicoesAnteriores.html" class="nav-link text-white" target="_parent">Edições Anteriores</a>
+                            <a href="pages/comunidade.html" class="nav-link text-white" target="_parent">Comunidade</a>
+                            <a href="pages/login.html" id="perfil" class="nav-link text-white" target="_parent"><span class="menu-texto">Perfil</span></a>
                         </nav>
                     </sidebar>
                 </div>
@@ -101,20 +97,14 @@
                                 </button>
                             </div>
 
-                            <!-- Links para a AG tomar vergonha na cara e escrever os textos para o site:
-                            https://pt.wikipedia.org/wiki/Copa_do_Mundo_FIFA
-                            https://www.sportingnews.com/br/futebol/noticias/historia-todas-copas-do-mundo-campeoes-fatos-memorias-edicao-por-edicao/7906d1a5aa0cb889431676da
-                            https://brasilescola.uol.com.br/educacao-fisica/copa-mundo.htm
-                            -->
-
-                            <div class="card d-flex flex-row mt-4" style=" margin: 0 auto;">
-                                <div class="card-body col-8">
+                            <div class="card d-flex flex-row justify-content-center mt-4" style=" margin: 0 auto;">
+                                <div class="card-body col-4">
                                     <h5 class="card-title">Título do conteúdo</h5>
-                                    <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse
+                                    <p class="card-text"> Escreva aqui o texto com o conteúdo que quiser exibir nesse
                                         card.</p>
                                 </div>
                                 <div class="col-4">
-                                    <img src="imagens/copa 2026.jpg" class="img-fluid h-100"
+                                    <img src="imagens/copa 2026.jpg" class="img-fluid h-100 col 4"
                                         style="object-fit: cover; border-radius: 0 5px 5px 0;">
                                 </div>
                             </div>
@@ -156,7 +146,7 @@
             <div class="row">
                 <footer class="col-12">
                     <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">&copy; Direitos
-                        reservados à Ana Giulia, André Raiden e Gustavo de Andrade.</p>
+                        reservados ao Coblog.</p>
                 </footer>
             </div>
         </div>

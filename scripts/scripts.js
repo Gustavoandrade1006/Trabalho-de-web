@@ -6,6 +6,9 @@
 const menuToggle = document.getElementById('menu-toggle');
 const overlay = document.getElementById('overlay');
 
+window.addEventListener("DOMContentLoaded", direcionarPerfil);
+
+// Função para o sidebar abrir e fechar
 menuToggle.addEventListener('change', () => {
     if (menuToggle.checked) {
         overlay.classList.add('ativo');
@@ -14,7 +17,7 @@ menuToggle.addEventListener('change', () => {
     }
 });
 
-// aqui quando clica no overlay fecha o sidebar também
+// Função para o sidebar fechar ao clicar fora dele
 overlay.addEventListener('click', () => {
     menuToggle.checked = false;
     overlay.classList.remove('ativo');
@@ -22,8 +25,7 @@ overlay.addEventListener('click', () => {
 
 
 
-//funçao para fazer os cards
-
+// Função criada para gerar os cards das edições da Copa do Mundo
 const copas = [
     { ano: 1930, campeao: "Uruguai", imagem: "/imagens/copa 1930.jpg", descricao: "Primeira Copa do Mundo da história, com vitória do Uruguai." },
     { ano: 1934, campeao: "Itália", imagem: "/imagens/copa 1934.jpg", descricao: "Segunda edição realizada na Itália, vitória dos anfitriões." },
@@ -54,7 +56,7 @@ const copas = [
 function carregarCards() {
     const container = document.getElementById("cards-container");
 
-    if (!container){
+    if (!container) {
         return;
     }
 
@@ -67,7 +69,7 @@ function carregarCards() {
         imagem.classList.add("card-img-top");
         imagem.alt = `Copa ${copa.ano}`;
 
-        imagem.src = ".."+ copa.imagem;
+        imagem.src = ".." + copa.imagem;
 
         let body = document.createElement("div");
         body.classList.add("card-body");
@@ -104,6 +106,7 @@ function logout() {
     location.reload();
 }
 
+// Função para manter o tema selecionado em outras páginas
 let lua = document.querySelector("#lua");
 const modoEscuro = localStorage.getItem("modo-escuro") == "true";
 
@@ -117,6 +120,7 @@ if (lua) {
     });
 }
 
+// Função que altera o botão de Login para Perfil + Acrescenta botão de Sair
 const nomeUsuario = localStorage.getItem("nome-usuario");
 let nav = document.getElementById("nav");
 let botao = document.createElement("a");
@@ -127,10 +131,10 @@ if (!window.location.pathname.includes("pages")) {
 if (nomeUsuario) {
     botao.innerText = "Perfil";
     botao.href = `${comeco}perfil.html`;
-    
+
     let menu = document.getElementById("menu-lateral")
     sair = document.createElement("button");
-    sair.innerText = "🚪 Sair";
+    sair.innerText = "Sair 🚪";
     sair.classList.add("btn", "btn-link", "text-white", "text-start", "text-decoration-none", "px-0");
     sair.onclick = logout;
     menu.appendChild(sair);
@@ -141,3 +145,23 @@ if (nomeUsuario) {
 }
 
 nav.prepend(botao);
+
+// Função que redireciona o usuário para a página se está logado ou não
+function direcionarPerfil() {
+    const nomeUsuario = localStorage.getItem("nome-usuario");
+    let comeco = "";
+
+    if (!window.location.pathname.includes("pages")) {
+        comeco = "pages/";
+    }
+
+    if (nomeUsuario) {
+        document
+            .getElementById("perfil")
+            .setAttribute("href", `${comeco}perfil.html`);
+    } else {
+        document
+            .getElementById("perfil")
+            .setAttribute("href", `${comeco}login.html`);
+    }
+}

@@ -12,7 +12,6 @@ body.dark-theme {
   --bg-aside: #283845;
 }
 
-/* Pode apagar o arquivo caso não seja necessária estilização além do Bootstrap! */
 body {
   height: 100%;
   margin: 0;
@@ -95,6 +94,7 @@ a {
 }
 
 .dark-mode-btn {
+  display: flex;
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -104,8 +104,9 @@ a {
   cursor: pointer;
   z-index: 1100;
   user-select: none;
-  border-radius: 20px;
-  text-align: center;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
   background-color: var(--bg-main);
   transition: all 0.8s ease;
 }
