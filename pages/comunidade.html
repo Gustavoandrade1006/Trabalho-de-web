@@ -22,29 +22,26 @@
             <div class="row">
                 <header class="header col-12">
                     <h2>Coblog</h2>
-                    <nav id="nav" style="gap: 15px" class="d-flex justify-content-between">
-                        <a href="../index.html" target="_parent">Página Inicial 🏠</a>
-                        <a href="edicoesAnteriores.html" target="_parent">Edições Anteriores 🏆</a>
-                        <a href="comunidade.html" target="_parent">Comunidade 👥</a>
+                    <nav id="nav" style="gap: 15px; padding-right: 10px;" class="d-flex justify-content-between">
+                        <a href="../index.html" class="nav-link text-white"><span class="menu-texto">Página Inicial</span></a>
                     </nav>
                 </header>
             </div>
         </div>
 
-        <sidebar id="sidebar">
-            <input type="checkbox" id="menu-toggle" hidden>
-            <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
+        <div class="col-2">
+            <sidebar id="sidebar">
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
 
-            <nav class="menu" style="color: white" ; id="menu-lateral">
-                <h5 class="text-white mb-4 menu-texto">Menu</h5>
-                <a href="#" class="nav-link text-white"><span class="menu-texto">🌍 Informações</span></a>
-                <a href="#" class="nav-link text-white"><span class="menu-texto">📊 Partidas</span></a>
-                <a href="#" class="nav-link text-white"><span class="menu-texto">👤 Perfil</span></a>
-                <a href="#" class="nav-link text-white"><span class="menu-texto">⚙️ Configurações</span></a>
-                <!-- <button class="nav-link text-white" onclick="logout();"><span
-                                    class="icone">🚪</span><span class="menu-texto"> Sair</span></button> -->
-            </nav>
-        </sidebar>
+                <nav class="menu" style="color: white" ; id="menu-lateral">
+                    <h4 style = "padding-top: 5px;" class="text-white menu-texto">Menu</h4>
+                    <a href="edicoesAnteriores.html" class="nav-link text-white" target="_parent">Edições Anteriores</a>
+                    <a href="comunidade.html" class="nav-link text-white" target="_parent">Comunidade</a>
+                    <a href="login.html" id="perfil" class="nav-link text-white" target="_parent"><span class="menu-texto">Perfil</span></a>
+                </nav>
+            </sidebar>
+        </div>
 
         <main>
 
@@ -60,8 +57,10 @@
         <div class="container-fluid">
             <div class="row">
                 <footer class="col-12">
-                    <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">&copy; Direitos
-                        reservados à Ana Giulia, André Raiden e Gustavo de Andrade.</p>
+                    <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">
+                        <a href="saibaMais.html" class="nav-link text-white">Saiba mais</a>
+                        &copy; Direitos reservados ao Coblog.
+                    </p>
                 </footer>
             </div>
         </div>
