@@ -74,24 +74,24 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Nome</label>
-                                <p> Nome Antigo do Usuário </p>
-                                <input type="text" class="form-control" placeholder="Digite um novo nome">
+                                <p id="nomeAntigo"> Nome Antigo do Usuário </p>
+                                <input type="text" class="form-control" placeholder="Digite um novo nome" id="nomeInput">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">E-mail</label>
-                                <p> E-mail Antigo do Usuário </p>
-                                <input type="email" class="form-control" placeholder="Digite um novo nome">
+                                <p id="emailAntigo"> E-mail Antigo do Usuário </p>
+                                <input type="email" class="form-control" placeholder="Digite um novo nome" id="emailInput">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Nova senha</label>
-                                <p> Senha Antiga do Usuário </p>
-                                <input type="password" class="form-control" placeholder="Digite uma nova senha">
+                                <p id="senhaAntigo"> Senha Antiga do Usuário </p>
+                                <input type="password" class="form-control" placeholder="Digite uma nova senha" id="senhaInput">
                             </div>
 
                             <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary" onclick="salvarAlteracoes()">
                                     Salvar alterações
                                 </button>
                             </div>
@@ -117,6 +117,7 @@
 
     <div class="overlay" id="overlay"></div>
 
+    <script src="../scripts/perfil.js"></script>
 </body>
 
 </html>
