@@ -36,11 +36,11 @@ body {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 100px;
   left: -200px;
   width: 200px;
-  bottom: 0;
+  height: 100vh;
   background: var(--bg-aside);
   color: white;
   display: flex;
