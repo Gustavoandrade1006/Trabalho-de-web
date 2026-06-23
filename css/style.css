@@ -80,7 +80,7 @@ main {
   z-index: 1000;
 }
 
-sidebar {
+#sidebar {
   overflow: visible;
 }
 
