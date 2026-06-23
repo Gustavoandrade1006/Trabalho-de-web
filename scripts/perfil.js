@@ -2,9 +2,11 @@ nomeUsuario = localStorage.getItem("nome-usuario");
 emailUsuario = localStorage.getItem("email-usuario");
 senhaUsuario = localStorage.getItem("senha-usuario");
 
-document.getElementById("nomeAntigo").innerText = `Nome Antigo do Usuário: ${nomeUsuario}`;
-document.getElementById("emailAntigo").innerText = `E-mail Antigo do Usuário: ${emailUsuario}`;
-document.getElementById("senhaAntigo").innerText = `Senha Antiga do Usuário: ${senhaUsuario}`;
+document.getElementById("nomeUsuarioPerfil").innerText = nomeUsuario;
+
+document.getElementById("nomeAntigo").innerText = `Nome Atual: ${nomeUsuario}`;
+document.getElementById("emailAntigo").innerText = `E-mail Atual: ${emailUsuario}`;
+document.getElementById("senhaAntigo").innerText = `Senha Atual: ${senhaUsuario}`;
 
 function verificarEmail(email) {
     const regex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
