@@ -17,59 +17,37 @@
     <input type="checkbox" id="lua" hidden>
     <label for="lua" class="dark-mode-btn">🌙</label>
 
-    <div class="d min-vh-100" style="position: relative;">
-        <div class="container-fluid">
-            <div class="row">
-                <header class="header col-12">
-                    <h2>Coblog</h2>
-                    <nav id="nav" style="gap: 15px; padding-right: 10px;" class="d-flex justify-content-between">
-                        <a href="../index.html" class="nav-link text-white"><span class="menu-texto">Página Inicial</span></a>
-                    </nav>
-                </header>
-            </div>
-        </div>
+    <header class="header col-12">
+        <h2>Coblog</h2>
+        <nav id="nav" style="gap: 15px; padding-right: 10px;" class="d-flex justify-content-between">
+            <a href="../index.html" class="nav-link text-white"><span class="menu-texto">Página
+                    Inicial</span></a>
+        </nav>
+    </header>
 
-        <div class="col-2">
-            <sidebar id="sidebar">
-                <input type="checkbox" id="menu-toggle" hidden>
-                <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
+    <sidebar id="sidebar">
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
 
-                <nav class="menu" style="color: white" ; id="menu-lateral">
-                    <h4 style = "padding-top: 5px;" class="text-white menu-texto">Menu</h4>
-                    <a href="edicoesAnteriores.html" class="nav-link text-white" target="_parent">Edições Anteriores</a>
-                    <a href="comunidade.html" class="nav-link text-white" target="_parent">Comunidade</a>
-                    <a href="login.html" id="perfil" class="nav-link text-white" target="_parent"><span class="menu-texto">Perfil</span></a>
-                </nav>
-            </sidebar>
-        </div>
+        <nav class="menu" style="color: white" ; id="menu-lateral">
+            <h4 style="padding-top: 5px;" class="text-white menu-texto">Menu</h4>
+            <a href="edicoesAnteriores.html" class="nav-link text-white" target="_parent">Edições
+                Anteriores</a>
+            <a href="comunidade.html" class="nav-link text-white" target="_parent">Comunidade</a>
+            <a href="saibaMais.html" class="nav-link text-white" target="_parent">Saiba Mais</a>
+        </nav>
+    </sidebar>
 
-        <main>
+    <main>
+        <button data-bs-toggle="modal" data-bs-target="#modalAviso">Testar modal</button>
+    </main>
 
-            <button data-bs-toggle="modal" data-bs-target="#modalAviso">Testar modal</button>
-
-
-
-        </main>
-
-
-
-
-        <div class="container-fluid">
-            <div class="row">
-                <footer class="col-12">
-                    <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">
-                        <a href="saibaMais.html" class="nav-link text-white">Saiba mais</a>
-                        &copy; Direitos reservados ao Coblog.
-                    </p>
-                </footer>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="overlay" id="overlay"></div>
-
-
+    <footer class="col-12">
+        <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">
+            <a href="pages/saibaMais.html" class="nav-link text-white">Saiba mais</a>
+            &copy; Direitos reservados ao Coblog.
+        </p>
+    </footer>
 
     <div class="modal fade" id="modalAviso" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -87,9 +65,8 @@
             </div>
         </div>
     </div>
-
-
-
+    
+    <div class="overlay" id="overlay"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/scripts.js"></script>
 

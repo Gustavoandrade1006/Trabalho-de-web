@@ -20,140 +20,127 @@
     <input type="checkbox" id="lua" hidden>
     <label for="lua" class="dark-mode-btn">🌙</label>
 
-    <div class="min-vh-100" style="position: relative;">
-        <div class="container-fluid">
-            <div class="row">
-                <header class="header col-12">
-                    <h2>Coblog</h2>
-                    <nav id="nav" style="gap: 15px; padding-right: 10px;" class="d-flex justify-content-between">
-                    </nav>
-                </header>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-2">
-                    <sidebar id="sidebar">
-                        <input type="checkbox" id="menu-toggle" hidden>
-                        <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
-
-                        <nav class="menu" style="color: white" ; id="menu-lateral">
-                            <h4 style = "padding-top: 5px;" class="text-white menu-texto">Menu</h4>
-                            <a href="pages/edicoesAnteriores.html" class="nav-link text-white" target="_parent">Edições Anteriores</a>
-                            <a href="pages/comunidade.html" class="nav-link text-white" target="_parent">Comunidade</a>
-                            <a href="pages/login.html" id="perfil" class="nav-link text-white" target="_parent"><span class="menu-texto">Perfil</span></a>
-                        </nav>
-                    </sidebar>
-                </div>
-
-                <div class="col-12">
-                    <main>
-                        <div
-                            style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 20px; padding-bottom: 30px; padding-top: 30px;">
-                            <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
-
-                                <!-- as barrinhas de baixo q mostra qual é a ordem e quem ta sendo exibido -->
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0"
-                                        class="active"></button>
-                                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1"></button>
-                                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2"></button>
-                                </div>
-
-                                <!-- os banners -->
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="imagens/banner1.jpg" class="d-block w-100" alt="Notícia 1">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>COPA 2026: Onde assistir?</h5>
-                                            <p>Veja onde você pode assistir às principais partidas da Copa do Mundo.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="imagens/banner2.jpg" class="d-block w-100" alt="Notícia 2">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Copa do Mundo 2026</h5>
-                                            <p>Confira as informações sobre esta edição da Copa do Mundo.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="imagens/banner3.jpg" class="d-block w-100" alt="Notícia 3">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Seleção Brasileira</h5>
-                                            <p>Confira as últimas notícias sobre a seleção brasileira de futebol.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- aq é as setinhas -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carrossel"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carrossel"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-
-                            <div class="card d-flex flex-row justify-content-center mt-4" style=" margin: 0 auto;">
-                                <div class="card-body col-4">
-                                    <h5 class="card-title">Título do conteúdo</h5>
-                                    <p class="card-text"> Escreva aqui o texto com o conteúdo que quiser exibir nesse
-                                        card.</p>
-                                </div>
-                                <div class="col-4">
-                                    <img src="imagens/copa 2026.jpg" class="img-fluid h-100 col 4"
-                                        style="object-fit: cover; border-radius: 0 5px 5px 0;">
-                                </div>
-                            </div>
 
 
-                            <div class="card d-flex flex-row mt-4" style="margin: 0 auto;">
-                                <div class="card-body col-8">
-                                    <h5 class="card-title">Título do conteúdo</h5>
-                                    <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse
-                                        card.</p>
-                                </div>
-                                <div class="col-4">
-                                    <img src="imagens/copa 2026.jpg" class="img-fluid h-100"
-                                        style="object-fit: cover; border-radius: 0 5px 5px 0;">
-                                </div>
-                            </div>
+    <header class="header col-12">
+        <h2>Coblog</h2>
+        <nav id="nav" style="gap: 15px; padding-right: 10px;" class="d-flex justify-content-between">
+        </nav>
+    </header>
 
 
+    <sidebar id="sidebar">
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
 
-                            <div class="card d-flex flex-row mt-4" style="margin: 0 auto;">
-                                <div class="card-body col-8">
-                                    <h5 class="card-title">Título do conteúdo</h5>
-                                    <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse
-                                        card.</p>
-                                </div>
-                                <div class="col-4">
-                                    <img src="imagens/copa 2026.jpg" class="img-fluid h-100"
-                                        style="object-fit: cover; border-radius: 0 5px 5px 0;">
-                                </div>
+        <nav class="menu" style="color: white" ; id="menu-lateral">
+            <h4 style="padding-top: 5px;" class="text-white menu-texto">Menu</h4>
+            <a href="pages/edicoesAnteriores.html" class="nav-link text-white" target="_parent">Edições
+                Anteriores</a>
+            <a href="pages/comunidade.html" class="nav-link text-white" target="_parent">Comunidade</a>
+            <a href="pages/saibaMais.html" class="nav-link text-white" target="_parent">Saiba Mais</a>
+        </nav>
+    </sidebar>
+
+    <div class="col-12">
+        <main>
+            <div
+                style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 20px; padding-bottom: 30px; padding-top: 30px;">
+                <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- as barrinhas de baixo q mostra qual é a ordem e quem ta sendo exibido -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- os banners -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagens/banner1.jpg" class="d-block w-100" alt="Notícia 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>COPA 2026: Onde assistir?</h5>
+                                <p>Veja onde você pode assistir às principais partidas da Copa do Mundo.</p>
                             </div>
                         </div>
+                        <div class="carousel-item">
+                            <img src="imagens/banner2.jpg" class="d-block w-100" alt="Notícia 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Copa do Mundo 2026</h5>
+                                <p>Confira as informações sobre esta edição da Copa do Mundo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagens/banner3.jpg" class="d-block w-100" alt="Notícia 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Seleção Brasileira</h5>
+                                <p>Confira as últimas notícias sobre a seleção brasileira de futebol.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    </main>
+                    <!-- aq é as setinhas -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrossel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <div class="card d-flex flex-row justify-content-center mt-4" style=" margin: 0 auto;">
+                    <div class="card-body col-4">
+                        <h5 class="card-title">Título do conteúdo</h5>
+                        <p class="card-text"> Escreva aqui o texto com o conteúdo que quiser exibir nesse
+                            card.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="imagens/copa 2026.jpg" class="img-fluid h-100 col 4"
+                            style="object-fit: cover; border-radius: 0 5px 5px 0;">
+                    </div>
+                </div>
+
+
+                <div class="card d-flex flex-row mt-4" style="margin: 0 auto;">
+                    <div class="card-body col-8">
+                        <h5 class="card-title">Título do conteúdo</h5>
+                        <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse
+                            card.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="imagens/copa 2026.jpg" class="img-fluid h-100"
+                            style="object-fit: cover; border-radius: 0 5px 5px 0;">
+                    </div>
+                </div>
+
+
+
+                <div class="card d-flex flex-row mt-4" style="margin: 0 auto;">
+                    <div class="card-body col-8">
+                        <h5 class="card-title">Título do conteúdo</h5>
+                        <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse
+                            card.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="imagens/copa 2026.jpg" class="img-fluid h-100"
+                            style="object-fit: cover; border-radius: 0 5px 5px 0;">
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <footer class="col-12">
-                    <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">
-                        <a href="pages/saibaMais.html" class="nav-link text-white">Saiba mais</a>
-                        &copy; Direitos reservados ao Coblog.
-                    </p>
-                </footer>
-            </div>
-        </div>
-
+        </main>
     </div>
+
+
+    <footer class="col-12">
+        <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">
+            <a href="pages/saibaMais.html" class="nav-link text-white">Saiba mais</a>
+            &copy; Direitos reservados ao Coblog.
+        </p>
+    </footer>
+
 
     <div class="overlay" id="overlay"></div>
 
