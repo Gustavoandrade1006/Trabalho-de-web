@@ -9,7 +9,7 @@ main {
   min-height: calc(100vh - 180px); /* Desconta header e footer */
 }
 
-/* Estilização do Título Corrigida (Efeito degradê aplicado na letra) */
+
 .titulo-comunidade {
   font-family: 'Arial Black', sans-serif;
   font-size: 1.8rem;
@@ -22,7 +22,7 @@ body.dark-theme .titulo-comunidade {
   
 }
 
-/* Botão Comentar Estilizado com Trava de Cor */
+
 button.btn-comentar,
 button.btn-comentar:hover {
   background-color: var(--bg-header) !important;
@@ -42,7 +42,7 @@ button.btn-comentar:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* O Card Atualizado conforme o novo desenho */
+
 .card-comentario {
   width: 90%;
   max-width: 850px;
@@ -57,7 +57,7 @@ button.btn-comentar:hover {
   gap: 15px;
 }
 
-/* Linha do topo que junta foto, nome e assunto */
+
 .card-comentario-header {
   display: flex;
   align-items: center;
@@ -65,29 +65,20 @@ button.btn-comentar:hover {
   width: 100%;
 }
 
-/* Bloco da foto + nome */
+
 .card-usuario-info {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* O círculo da foto de perfil */
-.card-avatar {
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--font-color);
-  border-radius: 50%;
-  background-color: transparent;
-  flex-shrink: 0;
-}
 
 .card-comentario h5 {
   font-weight: bold;
   margin: 0;
 }
 
-/* Texto do assunto alinhado à direita */
+
 .card-assunto {
   font-weight: 500;
   color: var(--font-color);
@@ -95,13 +86,13 @@ button.btn-comentar:hover {
   margin: 0;
 }
 
-/* Espaçamento do texto do comentário embaixo */
+
 .card-comentario-texto {
   margin: 0;
   padding-left: 52px; /* Alinha o texto logo abaixo do início do Nome */
 }
 
-/* Ajuste de cor adaptativo para o Header do card */
+
 body.dark-theme .card-usuario-info h5 {
   color: #00d2ff;
 }
