@@ -33,7 +33,11 @@ if (lua) {
 // Logout
 function logout() {
     localStorage.clear();
+    if (window.location.pathname.split("/").pop() == "perfil.html"){
+        window.location.replace("../index.html");
+    } else {
     location.reload();
+    }
 }
 
 // Botão login/perfil
@@ -43,24 +47,24 @@ const paginaAtual = window.location.pathname.split("/").pop();
 
 let nav = document.getElementById("nav");
 
-if (paginaAtual !== "perfil.html") {
-    let botao = document.createElement("a");
+let botao = document.createElement("a");
 
-    if (nomeUsuario) {
-        botao.innerText = "Perfil";
-        botao.href = `${comeco}perfil.html`;
-        botao.classList.add("text-decoration-none", "text-white")
-
-        let sair = document.createElement("button");
-        sair.innerText = "Sair 🚪";
-        sair.classList.add("btn", "btn-link", "text-white", "text-start", "text-decoration-none", "px-0");
-        sair.onclick = logout;
-        document.getElementById("menu-lateral").appendChild(sair);
-    } else {
-        botao.innerText = "Login";
-        botao.href = `${comeco}login.html`;
-        botao.target = "_parent";
-        botao.classList.add("text-decoration-none", "text-white")
+if (nomeUsuario) {
+    if (paginaAtual !== "perfil.html") {
+    botao.innerText = "Perfil";
+    botao.href = `${comeco}perfil.html`;
+    botao.classList.add("text-decoration-none", "text-white")
     }
-    nav.prepend(botao);
+
+    let sair = document.createElement("button");
+    sair.innerText = "Sair 🚪";
+    sair.classList.add("btn", "btn-link", "text-white", "text-start", "text-decoration-none", "px-0");
+    sair.onclick = logout;
+    document.getElementById("menu-lateral").appendChild(sair);
+} else {
+    botao.innerText = "Login";
+    botao.href = `${comeco}login.html`;
+    botao.target = "_parent";
+    botao.classList.add("text-decoration-none", "text-white")
 }
+nav.prepend(botao);

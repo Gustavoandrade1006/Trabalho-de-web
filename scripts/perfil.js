@@ -2,6 +2,7 @@ nomeUsuario = localStorage.getItem("nome-usuario");
 emailUsuario = localStorage.getItem("email-usuario");
 senhaUsuario = localStorage.getItem("senha-usuario");
 
+
 document.getElementById("nomeUsuarioPerfil").innerText = nomeUsuario;
 
 document.getElementById("nomeAntigo").innerText = `Nome Atual: ${nomeUsuario}`;
