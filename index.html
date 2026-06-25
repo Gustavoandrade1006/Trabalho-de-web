@@ -36,8 +36,9 @@
 
     <div class="container-fluid px-3 px-md-5">
         <main>
-            <div style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 20px; padding-bottom: 30px; padding-top: 30px;">
-                
+            <div
+                style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 20px; padding-bottom: 30px; padding-top: 30px;">
+
                 <div id="carrossel" class="carousel slide w-100" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active"></button>
@@ -46,65 +47,108 @@
                     </div>
 
                     <div class="carousel-inner">
+
                         <div class="carousel-item active">
-                            <img src="imagens/banner1.jpg" class="d-block w-100" alt="Notícia 1">
+                            <picture>
+                                <!-- Computador -->
+                                <source media="(min-width: 1024px)" srcset="imagens/banner1.jpg">
+
+                                <!-- Tablet -->
+                                <source media="(min-width: 768px)" srcset="imagens/banner4.jpeg">
+
+                                <!-- Celular -->
+                                <img src="imagens/banner7.jpeg" class="d-block w-100" alt="Notícia 1">
+                            </picture>
+
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>COPA 2026: Onde assistir?</h5>
                                 <p>Veja onde você pode assistir às principais partidas da Copa do Mundo.</p>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <img src="imagens/banner2.jpg" class="d-block w-100" alt="Notícia 2">
+                            <picture>
+                                <!-- Computador -->
+                                <source media="(min-width: 1024px)" srcset="imagens/banner2.jpg">
+
+                                <!-- Tablet -->
+                                <source media="(min-width: 768px)" srcset="imagens/banner5.jpeg">
+
+                                <!-- Celular -->
+                                <img src="imagens/banner8.jpeg" class="d-block w-100" alt="Notícia 2">
+                            </picture>
+
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Copa do Mundo 2026</h5>
                                 <p>Confira as informações sobre esta edição da Copa do Mundo.</p>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <img src="imagens/banner3.jpg" class="d-block w-100" alt="Notícia 3">
+                            <picture>
+                                <!-- Computador -->
+                                <source media="(min-width: 1024px)" srcset="imagens/banner3.jpg">
+
+                                <!-- Tablet -->
+                                <source media="(min-width: 768px)" srcset="imagens/banner6.jpeg">
+
+                                <!-- Celular -->
+                                <img src="imagens/banner9.jpeg" class="d-block w-100" alt="Notícia 3">
+                            </picture>
+
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Seleção Brasileira</h5>
                                 <p>Confira as últimas notícias sobre a seleção brasileira de futebol.</p>
                             </div>
                         </div>
+
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrossel"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
 
 
-                <div class="card d-flex flex-column flex-md-row mt-4 w-100" style="margin: 0 auto; max-width: 900px; overflow: hidden;">
+                <div class="card d-flex flex-column flex-md-row mt-4 w-100"
+                    style="margin: 0 auto; max-width: 900px; overflow: hidden;">
                     <div class="card-body col-12 col-md-8">
                         <h5 class="card-title">Título do conteúdo</h5>
                         <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse card.</p>
                     </div>
                     <div class="col-12 col-md-4">
-                        <img src="imagens/copa 2026.jpg" class="img-fluid w-100" style="object-fit: cover; min-height: 200px; height: 100%;">
+                        <img src="imagens/copa 2026.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; min-height: 200px; height: 100%;">
                     </div>
                 </div>
 
-                <div class="card d-flex flex-column flex-md-row mt-4 w-100" style="margin: 0 auto; max-width: 900px; overflow: hidden;">
+                <div class="card d-flex flex-column flex-md-row mt-4 w-100"
+                    style="margin: 0 auto; max-width: 900px; overflow: hidden;">
                     <div class="card-body col-12 col-md-8">
                         <h5 class="card-title">Título do conteúdo</h5>
                         <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse card.</p>
                     </div>
                     <div class="col-12 col-md-4">
-                        <img src="imagens/copa 2026.jpg" class="img-fluid w-100" style="object-fit: cover; min-height: 200px; height: 100%;">
+                        <img src="imagens/copa 2026.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; min-height: 200px; height: 100%;">
                     </div>
                 </div>
 
-                <div class="card d-flex flex-column flex-md-row mt-4 w-100" style="margin: 0 auto; max-width: 900px; overflow: hidden;">
+                <div class="card d-flex flex-column flex-md-row mt-4 w-100"
+                    style="margin: 0 auto; max-width: 900px; overflow: hidden;">
                     <div class="card-body col-12 col-md-8">
                         <h5 class="card-title">Título do conteúdo</h5>
                         <p class="card-text">Escreva aqui o texto com o conteúdo que quiser exibir nesse card.</p>
                     </div>
                     <div class="col-12 col-md-4">
-                        <img src="imagens/copa 2026.jpg" class="img-fluid w-100" style="object-fit: cover; min-height: 200px; height: 100%;">
+                        <img src="imagens/copa 2026.jpg" class="img-fluid w-100"
+                            style="object-fit: cover; min-height: 200px; height: 100%;">
                     </div>
                 </div>
 
