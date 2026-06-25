@@ -58,7 +58,7 @@ if (nomeUsuario) {
 
     let sair = document.createElement("button");
     sair.innerText = "Sair 🚪";
-    sair.classList.add("btn", "btn-link", "text-white", "text-start", "text-decoration-none", "px-0");
+    sair.classList.add("btn", "btn-link", "text-white", "text-decoration-none", "px-0", "sidebar-link");
     sair.onclick = logout;
     document.getElementById("menu-lateral").appendChild(sair);
 } else {

@@ -9,10 +9,11 @@ body.dark-theme {
   --bg-main: #1a1a2e;
   --font-color: white;
   --bg-header: #231651;
-  --bg-aside: #283845;
+  --bg-aside: #121438;
 }
 
 body {
+  position: relative;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -36,12 +37,14 @@ body {
 }
 
 .menu {
-  position: fixed;
+  position: absolute; 
   top: 100px;
-  left: -200px;
-  width: 200px;
-  height: 100vh;
+  left: -240px;
+  width: 240px;
+  min-height: calc(100vh - 100px); 
+  height: calc(100% - 100px);
   background: var(--bg-aside);
+  border-radius: 0 15px 15px 0;
   color: white;
   display: flex;
   flex-direction: column;
@@ -50,6 +53,23 @@ body {
   z-index: 999;
   gap: 1rem;
   transition: left 0.3s ease;
+}
+
+.sidebar-link {
+  display: block;
+  color: rgba(255, 255, 255, 0.85) !important; 
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 6px; 
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+
+.sidebar-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding-left: 18px; 
 }
 
 footer {
