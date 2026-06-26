@@ -16,53 +16,58 @@
 
     <input type="checkbox" id="lua" hidden>
     <label for="lua" class="dark-mode-btn">🌙</label>
-    
+
     <header class="header col-12">
         <h2>Coblog</h2>
         <nav id="nav" style="gap: 15px; padding-right: 10px;" class="d-flex justify-content-between">
             <a href="../index.html" class="nav-link text-white"><span class="menu-texto">Página
-                Inicial</span></a>
-            </nav>
-        </header>
-        
-        <aside id="sidebar">
-            <input type="checkbox" id="menu-toggle" hidden>
-            <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
-            
-            <nav class="menu" style="color: white;" id="menu-lateral">
-                <h4 class="text-white border-bottom pb-2 mb-3 menu-texto fs-5 fw-bold">Menu</h4>
-                <div class="d-flex flex-column gap-1">
-                    <a href="edicoesAnteriores.html" class="sidebar-link" target="_parent">Edições da Copa 🏆</a>
-                    <a href="comunidade.html" class="sidebar-link" target="_parent">Comunidade 👥</a>
-                </div>
-            </nav>
-        </aside>
-        
-        <main>
-            <div class="container">
-                <div class="d-flex justify-content-center">
-                    <button class="btn btn-filtrar" id="botao-filtrar" data-bs-toggle="modal"
-                    data-bs-target="#modalFiltro">Procurar</button>
-                </div>
-                <!-- Busca por Selecao-->
-                <div id="nav-filtro" class="align-items-center justify-content-center gap-3 my-3" style="display: none">
-                    <button class="btn btn-secondary" id="btn-anterior">&#8592;</button>
-                    <span id="filtro-info"></span>
-                    <button class="btn btn-secondary" id="btn-proximo">&#8594;</button>
-                </div>
-                <div class="timeline-section" id="timeline-section">
-                </div>
+                    Inicial</span></a>
+        </nav>
+    </header>
+
+    <aside id="sidebar">
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
+
+        <nav class="menu" style="color: white;" id="menu-lateral">
+            <h4 class="text-white border-bottom pb-2 mb-3 menu-texto fs-5 fw-bold">Menu</h4>
+            <div class="d-flex flex-column gap-1">
+                <a href="edicoesAnteriores.html" class="sidebar-link" target="_parent">Edições da Copa 🏆</a>
+                <a href="comunidade.html" class="sidebar-link" target="_parent">Comunidade 👥</a>
             </div>
-        </main>
-        
-        <footer class="col-12">
-            <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">
-                &copy; Direitos reservados ao Coblog.
-            </p>
-        </footer>
-        
-        <!--- Modal de filtro -->
-        <div class="modal fade" id="modalFiltro" data-bs-focus="false">
+        </nav>
+    </aside>
+
+    <main>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-filtrar" id="botao-filtrar" data-bs-toggle="modal"
+                    data-bs-target="#modalFiltro">Procurar</button>
+            </div>
+            <!-- Busca por Selecao-->
+            <div id="nav-filtro"
+                class="position-fixed top-0 start-50 translate-middle-x my-3" style="display: none !important; z-index: 1000;">
+                <div class="d-flex gap-3">
+                    <button class="btn btn-secondary" id="btn-antes" onclick="antesCopa()">&#8592;</button>
+                    <button class="btn btn-danger" id="btn-limpar" onclick="limparFiltro()">✕</button>
+                    <button class="btn btn-secondary" id="btn-proximo" onclick="proximoCopa()">&#8594;</button>
+                </div>
+                <span id="filtro-info"></span>
+            </div>
+
+            <div class="timeline-section" id="timeline-section">
+            </div>
+        </div>
+    </main>
+
+    <footer class="col-12">
+        <p style="color: white; text-align: center; margin: 0; padding: 10px 0;">
+            &copy; Direitos reservados ao Coblog.
+        </p>
+    </footer>
+
+    <!--- Modal de filtro -->
+    <div class="modal fade" id="modalFiltro" data-bs-focus="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -73,18 +78,20 @@
                     <form id="form-filtro">
                         <div class="my-2">
                             <label for="select-filtro" class="form-label">Tipo de filtro</label>
-                            <select class="form-select" name="select-filtro">
+                            <select class="form-select" name="select-filtro" id="select-filtro">
                                 <option value="ano">Ano</option>
                                 <option value="selecao">Seleção</option>
                             </select>
                         </div>
-                        <input type="text" class="form-control" name="input-filtro" placeholder="Digite aqui...">
+                        <input type="text" class="form-control" name="input-filtro" id="input-filtro"
+                            placeholder="Digite aqui...">
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="submit" form="form-filtro" class="btn"
-                        style="background-color: var(--bg-header); color: white;">Filtrar</button>
+                        style="background-color: var(--bg-header); color: white;"
+                        data-bs-dismiss="modal">Filtrar</button>
                 </div>
             </div>
         </div>
