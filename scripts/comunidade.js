@@ -1,3 +1,40 @@
+function criarComentario(dados) {
+    let novoCard = document.createElement("div");
+    novoCard.classList.add("card-comentario");
+
+    novoCard.innerHTML = `
+        <div class="card-comentario-header">
+            <div class="card-usuario-info">
+                <i class="bi bi-person-circle display-1 text-secondary"></i>
+                <h5>${dados.nomeLogado}</h5>
+            </div>
+            <p class="card-assunto">Assunto: ${dados.assunto}</p>
+        </div>
+        <p class="card-comentario-texto">${dados.texto}</p>
+    `;
+    return novoCard;
+}
+
+function salvarComentario(dados) {
+    let comentarios = JSON.parse(localStorage.getItem('listaComentarios')) || [];
+    comentarios.push(dados);
+    localStorage.setItem("listaComentarios", JSON.stringify(comentarios));
+}
+
+function carregarComentarios(containerComentarios) {
+    let comentarios = JSON.parse(localStorage.getItem('listaComentarios')) || [];
+    comentarios.forEach(comentario => {
+        let card = criarComentario(comentario);
+        containerComentarios.insertBefore(card, containerComentarios.firstChild);
+    });
+}
+
+function atualizarComentarios(containerComentarios) {
+    containerComentarios.innerHTML = "";
+    carregarComentarios(containerComentarios);
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const formComentario = document.getElementById("form-comentario");
     const containerComentarios = document.getElementById("container-comentarios");
@@ -8,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalComentario = new bootstrap.Modal(modalElement);
 
     if (formComentario && containerComentarios) {
+        carregarComentarios(containerComentarios);
         formComentario.addEventListener("submit", (e) => {
             e.preventDefault();
 
@@ -26,27 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 modalComentario.hide();
                 return
             }
-            // 3. Cria a nova estrutura com a foto e assunto idênticos ao desenho
-            const novoCard = document.createElement("div");
-            novoCard.classList.add("card-comentario");
+            let comentario = {"nomeLogado": nomeLogado, "assunto": assunto, "texto": texto};
+            salvarComentario(comentario);
 
-            novoCard.innerHTML = `
-                <div class="card-comentario-header">
-                    <div class="card-usuario-info">
-                        <i class="bi bi-person-circle display-1 text-secondary"></i>
-                        <h5>${nomeLogado}</h5>
-                    </div>
-                    <p class="card-assunto">Assunto: ${assunto}</p>
-                </div>
-                <p class="card-comentario-texto">${texto}</p>
-            `;
-
-            // Adiciona no topo da listagem
-            containerComentarios.insertBefore(novoCard, containerComentarios.firstChild);
 
             // Limpa e fecha
             formComentario.reset();
             modalComentario.hide();
+            carregarComentarios(containerComentarios);
         });
     }
 });
