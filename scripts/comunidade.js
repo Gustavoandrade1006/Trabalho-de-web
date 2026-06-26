@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const formComentario = document.getElementById("form-comentario");
     const containerComentarios = document.getElementById("container-comentarios");
-    
+
+    const modalElement1 = document.getElementById("modalAviso");
+    const modalAviso = new bootstrap.Modal(modalElement1);
     const modalElement = document.getElementById("modalComentario");
     const modalComentario = new bootstrap.Modal(modalElement);
 
@@ -18,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (assunto === "" || texto === "") return;
 
+            if (!nomeLogado) {
+                modalAviso.show();
+                formComentario.reset();
+                modalComentario.hide();
+                return
+            }
             // 3. Cria a nova estrutura com a foto e assunto idênticos ao desenho
             const novoCard = document.createElement("div");
             novoCard.classList.add("card-comentario");
