@@ -1,20 +1,48 @@
 :root {
-  --bg-main: white;
-  --font-color: black;
-  --bg-header: #3066BE;
-  --bg-aside: #092653;
-  --primary-color: #3066BE;
+    --bg-main: white;
+    --font-color: black;
+    --bg-header: #3066BE;
+    --bg-aside: #092653;
+    --primary-color: #3066BE;
 }
+
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+
 body {
-  background: var(--bg-main);
+    background: var(--bg-main);
 }
 
+#nav-filtro {
+    position: sticky;
+    top: 100px;
+    z-index: 100;
+    background-color: var(--bg-body);
+}
+
+button.btn-filtrar, .btn-filtrar:hover {
+  background-color: var(--bg-header) !important;
+  color: white !important;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 12px;
+  border: 2px solid transparent !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  outline: none !important;
+}
+
+button.btn-filtrar:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Video CSSNIPPETS */
 .timeline-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -35,7 +63,8 @@ body {
     order: 1;
 }
 
-.timeline-item.left .timeline-content, .timeline-item.right .timeline-img {
+.timeline-item.left .timeline-content,
+.timeline-item.right .timeline-img {
     order: 2;
 }
 

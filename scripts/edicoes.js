@@ -28,6 +28,7 @@ let timeline_section = document.querySelector("#timeline-section");
 copas.forEach(copa => {
     let timeline_item = document.createElement("div");
     timeline_item.classList.add("timeline-item", "fadeUp");
+    timeline_item.id = copa.ano;
     
     let timeline_img = document.createElement("div");
     timeline_img.classList.add("timeline-img");
@@ -72,3 +73,12 @@ function altura_linha() {
     section.style.setProperty("--linha-bottom", bottom + "px");
 }
 altura_linha();
+
+function filtrarCopas(tipo, texto) {
+    if (tipo == "ano") {
+        return copas.filter(copa => copa.ano == texto);
+    } else {
+        return copas.filter(copa => copa.campeao.toLowerCase() == texto.toLowerCase());
+    }
+}
+
