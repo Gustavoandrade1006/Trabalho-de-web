@@ -1,4 +1,11 @@
-function criarComentario(dados) {
+function deletarComentario(indice) {
+    let comentarios = JSON.parse(localStorage.getItem("listaComentarios")) || [];
+    comentarios.splice(indice, 1);
+    localStorage.setItem("listaComentarios", JSON.stringify(comentarios));
+    atualizarComentarios(document.getElementById("container-comentarios"));
+}
+
+function criarComentario(dados, indice) {
     let novoCard = document.createElement("div");
     novoCard.classList.add("card-comentario");
 
@@ -8,10 +15,18 @@ function criarComentario(dados) {
                 <i class="bi bi-person-circle display-1 text-secondary"></i>
                 <h5>${dados.nomeLogado}</h5>
             </div>
-            <p class="card-assunto">Assunto: ${dados.assunto}</p>
+            <div>
+                <button class="btn btn-danger btn-sm deletar">Excluir</button>
+            </div>
         </div>
+        <p class="card-assunto">Assunto: ${dados.assunto}</p>
         <p class="card-comentario-texto">${dados.texto}</p>
     `;
+
+    novoCard.querySelector(".deletar").addEventListener("click", () => {
+        deletarComentario(indice);
+    });
+
     return novoCard;
 }
 
@@ -23,10 +38,14 @@ function salvarComentario(dados) {
 
 function carregarComentarios(containerComentarios) {
     let comentarios = JSON.parse(localStorage.getItem('listaComentarios')) || [];
-    comentarios.forEach(comentario => {
-        let card = criarComentario(comentario);
-        containerComentarios.insertBefore(card, containerComentarios.firstChild);
+
+    comentarios.slice().reverse().forEach((comentario, indiceInvertido) => {
+        const indiceReal = comentarios.length - 1 - indiceInvertido;
+        let card = criarComentario(comentario, indiceReal);
+        containerComentarios.appendChild(card);
     });
+
+    containerComentarios.insertBefore(criarComentarioAdmin(), containerComentarios.firstChild);
 }
 
 function atualizarComentarios(containerComentarios) {
@@ -34,6 +53,23 @@ function atualizarComentarios(containerComentarios) {
     carregarComentarios(containerComentarios);
 }
 
+function criarComentarioAdmin() {
+    const card = document.createElement("div");
+    card.classList.add("card-comentario", "admin");
+
+    card.innerHTML = `
+        <div class="card-comentario-header">
+            <div class="card-usuario-info">
+                <i class="bi bi-person-circle display-1 text-secondary"></i>
+                <h5>⚽ Admin_Coblog</h5>
+            </div>
+        </div>
+        <p class="card-assunto">Assunto: Geral</p>
+        <p class="card-comentario-texto">Sejam bem-vindos! Deixem seus palpites e comentários sobre os jogos aqui na nossa aba da comunidade.</p>
+    `;
+
+    return card;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const formComentario = document.getElementById("form-comentario");
@@ -46,13 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (formComentario && containerComentarios) {
         carregarComentarios(containerComentarios);
+
         formComentario.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            // 1. Pega o nome do LocalStorage 
             const nomeLogado = localStorage.getItem("nome-usuario");
-
-            // 2. Pega os valores dos novos campos do formulário
             const assunto = document.getElementById("assunto-comentario").value.trim();
             const texto = document.getElementById("texto-comentario").value.trim();
 
@@ -62,16 +96,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 modalAviso.show();
                 formComentario.reset();
                 modalComentario.hide();
-                return
+                return;
             }
-            let comentario = {"nomeLogado": nomeLogado, "assunto": assunto, "texto": texto};
+
+            let comentario = { "nomeLogado": nomeLogado, "assunto": assunto, "texto": texto };
             salvarComentario(comentario);
 
-
-            // Limpa e fecha
             formComentario.reset();
             modalComentario.hide();
-            carregarComentarios(containerComentarios);
+            atualizarComentarios(containerComentarios);
         });
     }
 });

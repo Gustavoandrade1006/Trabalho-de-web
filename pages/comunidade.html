@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coblog - Conheça nossa Comunidade!</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/comunidade.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -46,18 +47,10 @@
             <button class="btn btn-comentar" data-bs-toggle="modal" data-bs-target="#modalComentario">Comentar</button>
         </div>
 
-        <div id="container-comentarios" class="w-100 d-flex flex-column align-items-center gap-4">
-            <div class="card-comentario">
-                <div class="card-comentario-header">
-                    <div class="card-usuario-info">
-                        <i class="bi bi-person-circle display-1 text-secondary"></i>
-                        <h5>⚽ Admin_Coblog</h5>
-                    </div>
-                    <p class="card-assunto">Assunto: Geral</p>
-                </div>
-                <p class="card-comentario-texto">Sejam bem-vindos! Deixem seus palpites e comentários sobre os jogos aqui na nossa aba da comunidade.</p>
-            </div>
+
+        <div id="container-comentarios" class="w-100 d-flex flex-column align-items-center gap-4 my-3">
         </div>
+
     </main>
 
 
@@ -85,37 +78,45 @@
         </div>
     </div>
 
-    
-    <div class="modal fade" id="modalComentario" tabindex="-1" aria-labelledby="modalComentarioLabel" aria-hidden="true">
+
+    <div class="modal fade" id="modalComentario" tabindex="-1" aria-labelledby="modalComentarioLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content card">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title" id="modalComentarioLabel" style="color: var(--font-color);">Novo Comentário</h5>
+                    <h5 class="modal-title" id="modalComentarioLabel" style="color: var(--font-color);">Novo Comentário
+                    </h5>
                 </div>
                 <form id="form-comentario">
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="assunto-comentario" class="form-label" style="color: var(--font-color);">Assunto</label>
-                            <input type="text" class="form-control" id="assunto-comentario" placeholder="Ex: Copa 2026, Palpites, Histórias..." required>
+                            <label for="assunto-comentario" class="form-label"
+                                style="color: var(--font-color);">Assunto</label>
+                            <input type="text" class="form-control" id="assunto-comentario"
+                                placeholder="Ex: Copa 2026, Palpites, Histórias..." required>
                         </div>
                         <div class="mb-3">
-                            <label for="texto-comentario" class="form-label" style="color: var(--font-color);">O que você está pensando?</label>
-                            <textarea class="form-control" id="texto-comentario" rows="4" placeholder="Escreva seu comentário aqui..." required></textarea>
+                            <label for="texto-comentario" class="form-label" style="color: var(--font-color);">O que
+                                você está pensando?</label>
+                            <textarea class="form-control" id="texto-comentario" rows="4"
+                                placeholder="Escreva seu comentário aqui..." required></textarea>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary" style="background-color: var(--bg-header); border: none;">Publicar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: var(--bg-header); border: none;">Publicar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    
+
     <div class="overlay" id="overlay"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/comunidade.js"></script>
     <script src="../scripts/scripts.js"></script>
 
 </body>
+
 </html>
