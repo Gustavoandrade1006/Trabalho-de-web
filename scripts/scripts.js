@@ -32,7 +32,10 @@ if (lua) {
 
 // Logout
 function logout() {
-    localStorage.clear();
+    localStorage.removeItem('nome-usuario');
+    localStorage.removeItem('email-usuario');
+    localStorage.removeItem('senha-usuario');
+    
     if (window.location.pathname.split("/").pop() == "perfil.html"){
         window.location.replace("../index.html");
     } else {
