@@ -24,25 +24,25 @@ body {
     background-color: var(--bg-body);
 }
 
-button.btn-filtrar, .btn-filtrar:hover {
-  background-color: var(--bg-header) !important;
-  color: white !important;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 12px;
-  border: 2px solid transparent !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  outline: none !important;
+button.btn-filtrar,
+.btn-filtrar:hover {
+    background-color: var(--bg-header) !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 2px solid transparent !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    outline: none !important;
 }
 
 button.btn-filtrar:hover {
-  opacity: 0.9 !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+    opacity: 0.9 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Video CSSNIPPETS */
 .timeline-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -74,7 +74,9 @@ button.btn-filtrar:hover {
 }
 
 .timeline-img img {
-    width: 40%;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     border-radius: 12px;
 }
 
@@ -87,6 +89,8 @@ button.btn-filtrar:hover {
     max-width: 45%;
     color: var(--font-color);
     padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .timeline-label {
@@ -119,4 +123,83 @@ button.btn-filtrar:hover {
     width: 2px;
     background: var(--primary-color);
     transform: translateX(-50%);
+}
+
+/* Versão para Celular */
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .timeline-section {
+        padding: 2rem 1rem;
+    }
+
+    .timeline-section::before {
+        display: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .timeline-item.left .timeline-img,
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-img,
+    .timeline-item.right .timeline-content {
+        order: initial;
+    }
+
+    .timeline-img,
+    .timeline-content {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .timeline-img {
+        margin-bottom: 20px;
+    }
+
+    .timeline-img img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .content-right {
+        text-align: center;
+    }
+
+    .timeline-label {
+        font-size: 13px;
+    }
+
+    .timeline-year {
+        font-size: 2rem;
+    }
+
+    .timeline-content p {
+        font-size: 15px;
+    }
+
+    .btn-filtrar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #nav-filtro {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    #nav-filtro .d-flex {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
