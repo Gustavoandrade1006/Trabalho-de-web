@@ -3,6 +3,7 @@
   --font-color: black;
   --bg-header: #3066BE;
   --bg-aside: #092653;
+  --bg-form: white;
 }
 
 body.dark-theme {
@@ -10,6 +11,7 @@ body.dark-theme {
   --font-color: white;
   --bg-header: #231651;
   --bg-aside: #121438;
+  --bg-form: #121438;
 }
 
 body {

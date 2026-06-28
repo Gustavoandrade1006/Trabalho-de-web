@@ -12,11 +12,6 @@
 
 
 <body>
-    <!-- Links para ajudar na importação dos arquivos
-        https://pt.stackoverflow.com/questions/12722/incluir-outro-arquivo-html-em-um-arquivo-html
-        https://web.dev/articles/imports?hl=pt-br
-    -->
-
     <input type="checkbox" id="lua" hidden>
     <label for="lua" class="dark-mode-btn">🌙</label>
 
@@ -27,7 +22,7 @@
                     Inicial</span></a>
         </nav>
     </header>
-    
+
     <aside id="sidebar">
         <input type="checkbox" id="menu-toggle" hidden>
         <label for="menu-toggle" class="hamburguer" style="color: rgb(0, 102, 255)">☰</label>
@@ -39,29 +34,32 @@
             <a href="comunidade.html" class="nav-link text-white" target="_parent">Comunidade</a>
         </nav>
     </aside>
-    
+
     <main style="display: flex; justify-content: center; align-items: center; flex: 1;">
         <div class="card col-6" style="background-color: #3066BE; margin:auto">
-            <h5 class="card-header" style="background-color: #3066BE; color: #ffffff;">Login</h5>
-            <div class="card-body" style="background-color: #ffffff">
+            <h5 class="card-header" style="background-color: var(--bg-header); color: #ffffff;">Login</h5>
+            <div class="card-body" style="background-color: var(--bg-form);">
                 <form action="../index.html" id="formulario">
                     <div class="mb-3">
-                        <label for="nomeInput" class="form-label" style="color: #000000;">Nome</label>
+                        <label for="nomeInput" class="form-label" style="color: var(--font-color);">Nome</label>
                         <input type="text" class="form-control" id="nomeInput">
-                        <div id="ajuda" class="form-text" style="color: #000000;">Não compartilhamos suas
+                        <div id="ajuda" class="form-text" style="color: var(--font-color);">Não compartilhamos suas
                             informações com ninguém.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="emailInput" class="form-label" style="color: #000000;">Email</label>
+                        <label for="emailInput" class="form-label" style="color: var(--font-color);">Email</label>
                         <input type="email" class="form-control" id="emailInput">
-                        <div id="ajuda" class="form-text" style="color: #000000;">Não compartilhamos suas
+                        <div id="ajuda" class="form-text" style="color: var(--font-color);">Não compartilhamos suas
                             informações com ninguém.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="senhaInput" class="form-label" style="color: #000000;">Senha</label>
+                        <label for="senhaInput" class="form-label" style="color: var(--font-color);">Senha</label>
                         <input type="password" class="form-control" id="senhaInput">
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="login()">Login</button>
+                    <button type="submit" class="btn btn-primary"
+                        style="background-color: var(--bg-header); border: none;" onclick="login()">
+                        Login
+                    </button>
                 </form>
             </div>
         </div>
@@ -76,6 +74,7 @@
     <div class="overlay" id="overlay"></div>
 
     <script src="../scripts/login.js"></script>
+    <script src="../scripts/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 
